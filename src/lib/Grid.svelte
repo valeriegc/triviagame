@@ -1,10 +1,12 @@
 <script>
-	let questions = [1, 2, 3, 4];
+	let questions = ['a', 'b', 'c', 'd'];
+
+	import { page } from '$app/stores';
 </script>
 
 <div class="grid">
 	{#each questions as question}
-		<div class="questionBox">Question</div>
+		<button class="questionBox">{$page.data.questions[0].choices[question]}</button>
 	{/each}
 </div>
 

@@ -1,7 +1,8 @@
 <script>
+	import { page } from '$app/stores';
 </script>
 
-<div class="question">Question:</div>
+<div class="question">Question:{$page.data.questions[0].question}</div>
 
 <style>
 	.question {
