@@ -19,6 +19,7 @@
 		justify-content: flex-end;
 		gap: 20%;
 		margin-bottom: 0;
+		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	}
 	.centralWrapper {
 		height: 100vh;

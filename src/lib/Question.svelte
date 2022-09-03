@@ -1,8 +1,9 @@
 <script>
 	import { page } from '$app/stores';
+	import { questionNumber } from '$lib/stores.js';
 </script>
 
-<div class="question">Question:{$page.data.questions[0].question}</div>
+<div class="question">Question: {$page.data.questions[$questionNumber].question}</div>
 
 <style>
 	.question {
