@@ -1,2 +1,17 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+	import Grid from '$lib/Grid.svelte';
+</script>
+
+<div class="wrapper">
+	<Grid />
+</div>
+
+<style>
+	.wrapper {
+		height: 100vh;
+		width: 100vw;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+</style>
