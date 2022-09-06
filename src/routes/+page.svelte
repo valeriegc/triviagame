@@ -1,15 +1,10 @@
-<script>
-	import GameNav from '../lib/GameNav.svelte';
-	import Grid from '../lib/Grid.svelte';
-	import Page from './game/+page.svelte';
-</script>
-
+n
 <div class="centralWrapper">
 	<div class="info">
 		<h1>Programming Trivia Game</h1>
 		<p>In this programming trivia game, you will be presented with 32 multiple choice questions.</p>
-		Once you press "begin" below, the game and a timer will automatically start. In the end of the game
-		you will be given both your score and the respective time.
+		Once you press "start the game" below, the game will automatically start. In the end of the game
+		you will be given both your score.
 		<p>
 			Should you answer a question wrong, the question will turn red. After each wrong answer, you
 			have the ability to pick a new alternative. You will not be punished for wrong answers, but

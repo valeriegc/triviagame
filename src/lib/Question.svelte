@@ -4,7 +4,7 @@
 </script>
 
 <div class="question">
-	Question {$questionNumber}: {$page.data.questions[$questionNumber].question}
+	Question {$questionNumber + 1}: {$page.data.questions[$questionNumber].question}
 </div>
 
 <style>
