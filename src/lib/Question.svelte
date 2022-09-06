@@ -3,7 +3,9 @@
 	import { questionNumber } from '$lib/stores.js';
 </script>
 
-<div class="question">Question: {$page.data.questions[$questionNumber].question}</div>
+<div class="question">
+	Question {$questionNumber}: {$page.data.questions[$questionNumber].question}
+</div>
 
 <style>
 	.question {
@@ -12,7 +14,7 @@
 		color: black;
 		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 		font-size: large;
-		background-color: beige;
+		background-color: white;
 		border: black solid 2px;
 		border-bottom: transparent;
 	}

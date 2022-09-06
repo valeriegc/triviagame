@@ -1,22 +1,28 @@
 <script>
-	let questions = ['a', 'b', 'c', 'd'];
 	import { questionNumber, correctAtFirst } from '$lib/stores.js';
 	import { page } from '$app/stores';
+	import { goto } from '$app/navigation';
+
+	$: choices = $page.data.questions[$questionNumber].choices;
+	$: questions = Object.keys(choices);
 
 	function check(i) {
 		let element = document.getElementById(questions[i]);
 		let correct = document.getElementsByClassName('trueAnswer');
 		let failed = document.getElementsByClassName('falseAnswer');
+
 		if (questions[i] == $page.data.questions[$questionNumber].answer) {
 			element.classList.add('trueAnswer');
+			if (failed.length == 0) {
+				$correctAtFirst += 1;
+			}
+			if ($page.data.questions.length - 1 == $questionNumber) {
+				goto('game/gameend');
+			}
 			setTimeout(() => {
-				if (failed.length == 0) {
-					$correctAtFirst += 1;
-				}
 				[...correct].forEach((e) => e.classList.remove('trueAnswer'));
 				[...failed].forEach((e) => e.classList.remove('falseAnswer'));
 				$questionNumber += 1;
-				console.log($correctAtFirst);
 			}, 1000);
 		} else {
 			element.classList.add('falseAnswer');
@@ -43,6 +49,7 @@
 	button {
 		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 		cursor: pointer;
+		background-color: white;
 	}
 	.text {
 		transition: all 0.2s ease-in-out;
@@ -54,9 +61,9 @@
 		border: black solid 1px;
 	}
 	:global(.falseAnswer) {
-		background-color: red;
+		background-color: red !important;
 	}
 	:global(.trueAnswer) {
-		background-color: lightgreen;
+		background-color: lightgreen !important;
 	}
 </style>

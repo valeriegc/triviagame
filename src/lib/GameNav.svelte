@@ -1,5 +1,5 @@
 <script>
-	let questionNum;
+	import { questionNumber } from '$lib/stores.js';
 	let minutes;
 	let seconds;
 	let totalQuestions = 32;
@@ -9,7 +9,7 @@
 	<div class="timer" />
 	<p>Time:{({ minutes }, { seconds })}</p>
 	<div class="questionCounter">
-		<p>Current question: {questionNum}/{totalQuestions}</p>
+		<p>Current question: {$questionNumber}/{totalQuestions}</p>
 	</div>
 </div>
 
@@ -18,6 +18,11 @@
 		height: 100px;
 		width: 300px;
 		border: solid black 1px;
-		background-color: beige;
+		background-color: white;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	}
 </style>
