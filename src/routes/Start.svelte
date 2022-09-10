@@ -1,5 +1,5 @@
 <script>
-	import { gameState } from '$lib/store.js';
+	import { gameState } from '$lib/stores.js';
 
 	function launch() {
 		$gameState += 1;
