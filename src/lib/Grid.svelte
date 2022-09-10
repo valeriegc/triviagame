@@ -1,11 +1,13 @@
 <script>
 	import { questionNumber, correctAtFirst } from '$lib/stores.js';
 	import { page } from '$app/stores';
-	import { goto } from '$app/navigation';
-
+	import { gameState } from '$lib/stores.js';
 	$: choices = $page.data.questions[$questionNumber].choices;
 	$: questions = Object.keys(choices);
 
+	function finishGame() {
+		$gameState += 1;
+	}
 	function check(i) {
 		let element = document.getElementById(questions[i]);
 		let correct = document.getElementsByClassName('trueAnswer');
@@ -17,7 +19,7 @@
 				$correctAtFirst += 1;
 			}
 			if ($page.data.questions.length - 1 == $questionNumber) {
-				goto('game/gameend');
+				finishGame();
 			}
 			setTimeout(() => {
 				[...correct].forEach((e) => e.classList.remove('trueAnswer'));
