@@ -1,5 +1,5 @@
 <script>
-	import { correctAtFirst } from '$lib/stores.js';
+	import { correctAtFirst } from '../lib/stores.js';
 </script>
 
 <div id="container">

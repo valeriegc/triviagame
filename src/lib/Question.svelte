@@ -1,6 +1,6 @@
 <script>
 	import { page } from '$app/stores';
-	import { questionNumber } from '$lib/stores.js';
+	import { questionNumber } from './stores.js';
 </script>
 
 <div class="question">

@@ -1,7 +1,7 @@
 <script>
-	import { questionNumber, correctAtFirst } from '$lib/stores.js';
+	import { questionNumber, correctAtFirst } from './stores.js';
 	import { page } from '$app/stores';
-	import { gameState } from '$lib/stores.js';
+	import { gameState } from './stores.js';
 	$: choices = $page.data.questions[$questionNumber].choices;
 	$: questions = Object.keys(choices);
 
