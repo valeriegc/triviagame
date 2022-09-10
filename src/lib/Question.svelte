@@ -4,18 +4,21 @@
 </script>
 
 <div class="question">
-	Question {$questionNumber + 1}: {$page.data.questions[$questionNumber].question}
+	<h1>Question {$questionNumber + 1}:</h1>
+	{$page.data.questions[$questionNumber].question}
 </div>
 
 <style>
 	.question {
-		height: 160px;
+		height: 120px;
 		width: 600px;
 		color: black;
 		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 		font-size: large;
 		background-color: white;
-		border: black solid 2px;
-		border-bottom: transparent;
+		padding-top: 20px;
+	}
+	h1 {
+		font-size: large;
 	}
 </style>

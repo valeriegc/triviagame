@@ -34,7 +34,7 @@
 
 <div class="grid">
 	{#each questions as question, i}
-		<button class="questionBox" id={questions[i]} on:click={() => check(i)}>
+		<button id={questions[i]} on:click={() => check(i)}>
 			<div class="text">{$page.data.questions[$questionNumber].choices[question]}</div>
 		</button>
 	{/each}
@@ -45,13 +45,17 @@
 		display: grid;
 		height: 300px;
 		width: 600px;
-		border: black solid 2px;
 		grid-template-columns: 1fr 1fr;
+		gap: 5px;
 	}
 	button {
 		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 		cursor: pointer;
-		background-color: white;
+		background-color: #3cb2bc;
+		border-radius: 20px;
+		border: 0;
+		outline: 0;
+		padding: 50px;
 	}
 	.text {
 		transition: all 0.2s ease-in-out;
@@ -59,11 +63,8 @@
 	button:hover .text {
 		transform: scale(1.4);
 	}
-	.questionBox {
-		border: black solid 1px;
-	}
 	:global(.falseAnswer) {
-		background-color: red !important;
+		background-color: rgb(215, 121, 121) !important;
 	}
 	:global(.trueAnswer) {
 		background-color: lightgreen !important;

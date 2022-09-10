@@ -26,28 +26,6 @@
 </div>
 
 <style>
-	.centralWrapper {
-		height: 100vh;
-		width: 100vw;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-direction: column;
-		margin-top: 0;
-		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-		text-align: center;
-		background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #004d7a, #051937);
-	}
-	.info {
-		padding: 20px;
-		height: 460px;
-		width: 600px;
-		border-radius: 1%;
-		box-shadow: rgba(0, 0, 0, 0.25) 1.95px 1.95px 2.6px;
-		background-color: white;
-		opacity: 0.8;
-	}
-
 	p {
 		padding: 2.5%;
 	}

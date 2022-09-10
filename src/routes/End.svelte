@@ -1,27 +1,27 @@
 <script>
+	import { correctAtFirst } from '$lib/stores.js';
 </script>
 
-<div class="centralWrapper">
-	<div class="info">
-		<h1>Congratulations! You finished the game</h1>
+<div id="container">
+	<h1>Congratulations! You finished the game</h1>
+	<div id="innerContainer">
+		<h2>You're score was:</h2>
+		<div class="score">{$correctAtFirst}/39</div>
 	</div>
 </div>
 
 <style>
-	.centralWrapper {
-		height: 100vh;
-		width: 100vw;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-direction: column;
-		margin-top: 0;
-		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-		text-align: center;
+	.score {
+		font-size: 40px;
+		font-weight: bolder;
 	}
-	.info {
-		height: 460px;
-		width: 600px;
-		border: black solid 1px;
+	#container {
+		display: flex;
+		flex-direction: column;
+	}
+	#innerContainer {
+		padding-top: 10%;
+		align-self: center;
+		justify-self: center;
 	}
 </style>
