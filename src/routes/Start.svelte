@@ -1,10 +1,9 @@
 <script>
-	import { gameState } from '../lib/stores.js';
+	import { gameState } from '$lib/store';
 
 	function launch() {
 		$gameState += 1;
 	}
-	console.log($gameState);
 </script>
 
 <div class="centralWrapper">

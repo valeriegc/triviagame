@@ -2,7 +2,7 @@
 	import Start from './Start.svelte';
 	import Game from './Game.svelte';
 	import End from './End.svelte';
-	import { gameState } from '../lib/stores.js';
+	import { gameState } from '$lib/stores';
 </script>
 
 <div class="centralWrapper">
